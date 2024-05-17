@@ -22,3 +22,5 @@ const DonationDeployFnc = async () => {
 }
 
 export default DonationDeployFnc
+
+DonationDeployFnc.tags = ['Donation','all']

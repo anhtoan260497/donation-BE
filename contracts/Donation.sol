@@ -32,7 +32,7 @@ contract Donation is Ownable {
     }
 
     function _widthdraw() external onlyOwner {
-        if (address(this).balance > 0) revert Donation__NoBalanceToWidthdraw();
+        if (address(this).balance <= 0) revert Donation__NoBalanceToWidthdraw();
         (bool success, ) = payable(owner()).call{value: address(this).balance}("");
         if (!success) revert Donation__WidthdrawFailed();
         s_balances = 0;
@@ -42,6 +42,10 @@ contract Donation is Ownable {
     function getBalances() external view returns (uint256) {
         if(owner() != msg.sender) revert Donation__OnlyOwnerCanSeeThis();
         return s_balances;
+    }
+
+    function getBalanceWithFnc() external view returns (uint256) {
+        return address(this).balance;
     }
 
     function changeOwner(address _newOwner) external onlyOwner {
