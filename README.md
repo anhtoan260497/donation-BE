@@ -1,13 +1,8 @@
-# Sample Hardhat Project
+# Donation project with Web3
+### 😅 This project only uses testnet such as Binance Smart Chain Testnet and Ethereum Sepolia Testnet, we don't use real mainnet here, so if you wanna test you can faucet BNB Testnet at [this link](https://www.bnbchain.org/en/testnet-faucet) or ETH Sepolia Testnet at [this link](https://www.alchemy.com/faucets/ethereum-sepolia) and Of course you'll need Metamask to interact with web3
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, and a Hardhat Ignition module that deploys that contract.
+[Production Page](https://donation-fe-two.vercel.app/)
 
-Try running some of the following tasks:
+- This project use **Solidity** and **Hardhat with TypeScript** with ***Uniswap GraphQL*** for rate conversion
 
-```shell
-npx hardhat help
-npx hardhat test
-REPORT_GAS=true npx hardhat test
-npx hardhat node
-npx hardhat ignition deploy ./ignition/modules/Lock.ts
-```
+feel free to interact with it
